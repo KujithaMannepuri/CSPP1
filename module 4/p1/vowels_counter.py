@@ -9,11 +9,11 @@ def main():
     s = input()
 
     
-    count=0
+    count = 0
     for i in s:
-        if i=='a' or i=='e' or i=='o' or i=='i' or i=='u':
+        if i == 'a' or i == 'e' or i == 'o' or i == 'i' or i == 'u':
             count = count +1
     print(count)
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
