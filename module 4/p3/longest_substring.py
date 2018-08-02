@@ -20,9 +20,9 @@ def main():
     ''' substring '''
     string1 = input()
     length = len(string1)
-    maxcount = " "
+    maxcount = ""
     for i in range(length):
-        string2 = " "
+        string2 = "s"
         temp = string1[i]
         for j in range(i, length):
             if temp <= string1[j]:
