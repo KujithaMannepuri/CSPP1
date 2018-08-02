@@ -6,6 +6,7 @@ For example, if s = 'azcbobobegghakl', then your program should print
 Number of times bob occurs is: 2'''
 
 def main():
+    '''string'''
     string1 = input()
     string2 = 'bob'
     length1 = len(string1)
