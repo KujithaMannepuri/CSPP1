@@ -10,7 +10,6 @@ def main():
     string1 = input()
     string2 = 'bob'
     length1 = len(string1)
-    length2 = len(string2)
     i, j, count = 0, 0, 0
     while i < length1-1:
         if string1[i] == string2[j]:
