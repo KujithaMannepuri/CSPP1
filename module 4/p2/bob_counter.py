@@ -7,12 +7,12 @@ Number of times bob occurs is: 2'''
 
 def main():
     '''string'''
-    string=input()
-    count=0
-    num=string.find('bob')
-    while num>=0:
-        count=count+1
-        num=string.find('bob',num+2)
+    string = input()
+    count = 0
+    num = string.find('bob')
+    while num >= 0:
+        count = count+1
+        num = string.find('bob', num+2)
     print(count)
 if __name__ == "__main__":
     main()
