@@ -6,12 +6,12 @@
 
 def main():
     '''Vowels'''
-    s = input()
+    string = input()
 
     
     count = 0
-    for i in s:
-        if i == 'a' or i == 'e' or i == 'o' or i == 'i' or i == 'u':
+    for i in string:
+        if i in ('a','e','i','o','u'):
             count = count +1
     print(count)
 
