@@ -22,7 +22,7 @@ def main():
     length = len(string1)
     maxcount = ""
     for i in range(length):
-        string2 = "s"
+        string2 = ""
         temp = string1[i]
         for j in range(i, length):
             if temp <= string1[j]:
