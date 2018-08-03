@@ -17,14 +17,14 @@ def main():
     # don't change these values
     epsilon = 0.01
     step = 0.1
-    guess = 0.0
+    sroot = 0.0
     # your code starts here
-    while abs(guess**2 - square) >= epsilon:
-        guess += step
-    if abs(guess**2-square) >= epsilon:
+    while abs(sroot**2 - square) >= epsilon:
+        sroot += step
+    if abs(sroot**2-square) >= epsilon:
         print()
     else:
-        print(guess)
+        print(sroot)
 
 if __name__ == "__main__":
     main()
