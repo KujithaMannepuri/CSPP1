@@ -12,11 +12,11 @@
 def main():
 	num = int(input())
 	#your code here
-	epsilon=0.01
-	root=num/2.0
-	while abs(root*root-num)>=epsilon:
-		root=root-(((root**2)-num)/(2*root))
+	epsi = 0.01
+	root = num/2.0
+	while abs(root*root-num) >= eps:
+		root = root-(((root**2)-num)/(2*root))
 	print(str(root))
 
-if __name__== "__main__":
+if __name__ == "__main__":
 	main()
