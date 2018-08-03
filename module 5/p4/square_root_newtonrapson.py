@@ -1,4 +1,5 @@
 # Write a python program to find the square root of the given number
+'''squareroot newton rampson'''
 # using approximation method
 
 # testcase 1
@@ -10,6 +11,7 @@
 # output: 6.999999999999991
 
 def main():
+    '''square root newton rampson'''
     num = int(input())
     #your code here
     eps = 0.01
