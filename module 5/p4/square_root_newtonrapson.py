@@ -12,7 +12,7 @@
 def main():
 	num = int(input())
 	#your code here
-	epsi = 0.01
+	eps = 0.01
 	root = num/2.0
 	while abs(root*root-num) >= eps:
 		root = root-(((root**2)-num)/(2*root))
