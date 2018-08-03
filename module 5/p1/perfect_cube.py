@@ -1,4 +1,5 @@
 # Write a python program to find if the given number is a perfect cube or not
+'''perfect cube'''
 # using guess and check algorithm
 
 # testcase 1
