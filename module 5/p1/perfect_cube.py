@@ -15,7 +15,7 @@ def main():
     ans = 0
     while ans**3 < num:
         ans = ans + 1
-    if ans**3 != s:
+    if ans**3 != num:
         print(str(num) + 'is not a perfect cube')
     else:
         print(str(num) + 'is a perfect cube')
