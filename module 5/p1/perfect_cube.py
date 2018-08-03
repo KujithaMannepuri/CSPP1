@@ -11,6 +11,7 @@
 
 def main():
     # input is captured in s
+    '''perfect cube'''
     num = int(input())
     ans = 0
     while ans**3 < num:
