@@ -26,6 +26,6 @@ def main():
         else:
             high = rslt
         rslt = (high + low) / 2.0
-    print(str(rslt) + str(num))
+    print(str(rslt) )
 if __name__ == "__main__":
     main()
