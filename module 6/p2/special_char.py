@@ -7,14 +7,15 @@ def main():
     '''
     Read string from the input, store it in variable str_input.
     '''
-    string = input()
-    l=len(string)
-    str2=[" "]
-    for i in range(0,l,1):
-    	char=string[i]
-    	if char==['!','@','#','$','%','^','&','*']:
-    		char=str2
-    print(string)
+    str1=input()
+    str2=" "
+    l1=len(string)
+    temp=[]
+    for i in range(0,l1,1):
+    	if str1[i]==['!','@','#','$','%','^','&','*']:
+    		temp=str2
+    		str1[i]=temp
+    	print(str1)
 
 
 

@@ -1,3 +1,8 @@
-value = 'kujitha'
-for i in range(10):
-	print(value)
+
+x = 12
+def g(x):
+      x = x + 1
+      def h(y):
+          return x + y
+      return h(6)
+g(x)
