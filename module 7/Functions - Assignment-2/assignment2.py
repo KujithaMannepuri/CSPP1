@@ -51,7 +51,6 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(payingdebtoffinayear(data[0], data[1]))
+    print("Lowest Payment:", payingdebtoffinayear(data[0], data[1]))
 if __name__ == "__main__":
     main()
-    
