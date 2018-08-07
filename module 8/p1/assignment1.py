@@ -19,7 +19,7 @@ def main():
     ''' factorial of a number'''
     num = input()
     print(fact(int(num)))
-if __name__ == "__main__": 
+if __name__ == "__main__":
     import sys
     sys.setrecursionlimit(25500)
     main()
