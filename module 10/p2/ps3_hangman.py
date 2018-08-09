@@ -23,21 +23,21 @@ def loadwords():
     # line: string
     line = infile.readline()
     # wordlist: list of strings
-    wordlist = line.split()
-    print("  ", len(wordlist), "words loaded.")
-    return wordlist
+    wordlist1 = line.split()
+    print("  ", len(wordlist1), "words loaded.")
+    return wordlist1
 def testinput(guess):
     '''guess word'''
     if len(guess) > 1 or (guess <= 'a' and guess >= 'z'):
         print("Invalid")
         return False
     return True
-def chooseword(wordlist):
+def chooseword(word_list1):
     """
     wordlist (list): list of words (strings)
     Returns a word from wordlist at random
     """
-    return random.choice(wordlist)
+    return random.choice(word_list1)
 
 # end of helper code
 # -----------------------------------
