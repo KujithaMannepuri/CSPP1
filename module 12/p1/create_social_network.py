@@ -36,13 +36,16 @@ def create_social_network(data):
     dict1 = {}
     data = data.splitlines()
     for ele in data:
-        key, val = ele.split(' follows ')
-        if key in dict1:
-            if val not in dict1[key]:
-                dict1[key].append(val)
+        if "follows" in ele:
+            key, val = ele.split(' follows ')
+            if key in dict1:
+                if val not in dict1[key]:
+                    dict1[key].append(val)
+            else:
+                dict1[key] = val.split(',')
+            return dict1
         else:
-            dict1[key] = val.split(',')
-    return dict1
+            return {}
 
 def main():
     '''
