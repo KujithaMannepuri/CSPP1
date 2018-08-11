@@ -44,8 +44,7 @@ def create_social_network(data):
             else:
                 dict1[key] = val.split(',')
         return dict1
-    else:
-        return {}
+    return {}
 
 def main():
     '''
