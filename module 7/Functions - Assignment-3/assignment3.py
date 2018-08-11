@@ -60,7 +60,7 @@ def payingdebtoffinayear(balance, annualinterestrate):
     monthlypaymentlow = balance / 12
     monthlypaymenthigh = (balance * (1 + monthlyinterest) ** 12) / 12.0
     newbal = balance
-    epsilon = 0.0001
+    epsilon = 0.03
     amount = (monthlypaymentlow + monthlypaymenthigh) / 2
     while True:
         month = 1
