@@ -15,7 +15,6 @@ def odd(x):
     '''
     # Your code here
     return x%2==1
-
 def main():
     data = input()
     print(odd(int(data)))
