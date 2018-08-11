@@ -36,7 +36,7 @@ def create_social_network(data):
     dict1 = {}
     data = data.splitlines()
     for ele in data:
-        key, val = ele.split('follows')
+        key, val = ele.split(' follows ')
         print(key)
         if key in dict1:
             if val not in dict1[key]:
