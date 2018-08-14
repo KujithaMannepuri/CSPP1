@@ -31,7 +31,7 @@ def is_straight(hand):
             newhand.append(int(hand[index][0]))
     newhand.sort()
     for index in range(len1 - 1):
-        if newhand[index] - newhand[index-1] != 1:
+        if newhand[index+1] - newhand[index] != 1:
             return False
     return True
 
@@ -79,7 +79,7 @@ def hand_rank(hand):
         return 3
     elif is_flush(hand):
         return 2
-    elif is_straight(hand):
+    if is_straight(hand):
         return 1
     return 0
 
