@@ -3,17 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-
-def is_straight(hand):
-    '''
-        How do we find out if the given hand is a straight?
-        The hand has a list of cards represented as strings.
-        There are multiple ways of checking if the hand is a straight.
-        Do we need both the characters in the string? No.
-        The first character is good enough to determine a straight
-        Think of an algorithm: given the card face value how to check if it a straight
-        Write the code for it and return True if it is a straight else return False
-    '''
+def sort(hand):
     len1 = len(hand)
     newhand = []
     for index in range(len1):
@@ -29,9 +19,21 @@ def is_straight(hand):
             newhand.append(14)
         else:
             newhand.append(int(hand[index][0]))
-    newhand.sort()
+    return newhand
+def is_straight(hand):
+    '''
+        How do we find out if the given hand is a straight?
+        The hand has a list of cards represented as strings.
+        There are multiple ways of checking if the hand is a straight.
+        Do we need both the characters in the string? No.
+        The first character is good enough to determine a straight
+        Think of an algorithm: given the card face value how to check if it a straight
+        Write the code for it and return True if it is a straight else return False
+    '''
+    len1 = len(hand)
+    sortlist = sorted(sort(hand))
     for index in range(len1 - 1):
-        if newhand[index+1] - newhand[index] != 1:
+        if sortlist[index+1] - sortlist[index] != 1:
             return False
     return True
 
@@ -50,6 +52,51 @@ def is_flush(hand):
         if hand[index][1] != hand[index+1][1]:
             return False
     return True
+def fourofakind(hand):
+    count = 0
+    sortlist = sorted(sort(hand))
+    for i in range(len(sortlist)-3):
+        if sortlist[i] == sortlist[i+1] == sortlist[i+2] == sortlist[i+3]:
+            count +=1
+    if count == 1:
+        return True
+    return False
+
+def threeofakind(hand):
+    count = 0
+    sortlist = sorted(sort(hand))
+    for i in range(len(sortlist)-2):
+        if sortlist[i] == sortlist[i+1] == sortlist[i+2]:
+            count +=1
+    if count == 1:
+        return True
+    return False
+
+def onepair(hand):
+    sortlist = sorted(sort(hand))
+    setlist = set(sortlist)
+    if len(sortlist) - len(setlist) == 1:
+        return True
+    return False
+
+def twopair(hand):
+    sortlist = sorted(sort(hand))
+    setlist = set(sortlist)
+    if len(sortlist) - len(setlist) == 2:
+        return True
+    return False
+
+def fullhouse(hand):
+    count = 0
+    i = 0
+    sortlist = sorted(sort(hand))
+    if sortlist[i] == sortlist[i+1] == sortlist[i+2] or sortlist[i+3] == sortlist[i+4]:
+        count += 1
+    elif sortlist[i+3] == sortlist[i+4] and sortlist[i] == sortlist[i+1] == sortlist[i+2]:
+        count += 1
+    if count == 1:
+        return True
+    return False
 
 def hand_rank(hand):
     '''
