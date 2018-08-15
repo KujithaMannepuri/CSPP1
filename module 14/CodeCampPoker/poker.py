@@ -4,6 +4,7 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 def sort(hand):
+    '''appwnding values to list'''
     len1 = len(hand)
     newhand = []
     for index in range(len1):
@@ -53,26 +54,29 @@ def is_flush(hand):
             return False
     return True
 def is_fourofakind(hand):
+    ''' four face values'''
     count = 0
     sortlist = sorted(sort(hand))
     for i in range(len(sortlist)-3):
         if sortlist[i] == sortlist[i+1] == sortlist[i+2] == sortlist[i+3]:
-            count +=1
+            count += 1
     if count == 1:
         return True
     return False
 
 def is_threeofakind(hand):
+    '''three face values'''
     count = 0
     sortlist = sorted(sort(hand))
     for i in range(len(sortlist)-2):
         if sortlist[i] == sortlist[i+1] == sortlist[i+2]:
-            count +=1
+            count += 1
     if count == 1:
         return True
     return False
 
 def is_onepair(hand):
+    '''one pair values'''
     sortlist = sorted(sort(hand))
     setlist = set(sortlist)
     if len(sortlist) - len(setlist) == 1:
@@ -80,6 +84,7 @@ def is_onepair(hand):
     return False
 
 def is_twopair(hand):
+    '''two pair values'''
     sortlist = sorted(sort(hand))
     setlist = set(sortlist)
     if len(sortlist) - len(setlist) == 2:
@@ -87,6 +92,7 @@ def is_twopair(hand):
     return False
 
 def is_fullhouse(hand):
+    ''' three face values and two face values must be equal in a hand'''
     count = 0
     i = 0
     sortlist = sorted(sort(hand))
