@@ -107,6 +107,7 @@ def is_fullhouse(hand):
     return False
 
 def high_hand(hand):
+    ''' high hand values'''
     sortlist = sorted(sort(hand))
     setlist = set(sortlist)
     if len(setlist) == 5 and not is_flush(hand):
