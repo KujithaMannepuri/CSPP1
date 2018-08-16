@@ -153,7 +153,7 @@ def hand_rank(hand):
         return 2
     if is_fullhouse(hand):
         return 7
-    return 0
+    return high_hand(hand)
 
 def poker(hands):
     '''
