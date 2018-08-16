@@ -106,9 +106,6 @@ def is_fullhouse(hand):
         return True
     return False
 
-def is_highcard(hand):
-
-
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
