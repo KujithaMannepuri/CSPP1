@@ -80,8 +80,10 @@ def is_onepair(hand):
     sortlist = sorted(sort(hand))
     setlist = set(sortlist)
     if len(sortlist) - len(setlist) == 1:
-        return True
-    return False
+        for index in setlist:
+            if sortlist.count(index) == 2:
+                return index/10
+    return 50
 
 def is_twopair(hand):
     '''two pair values'''
@@ -103,6 +105,9 @@ def is_fullhouse(hand):
     if count == 1:
         return True
     return False
+
+def is_highcard(hand):
+
 
 def hand_rank(hand):
     '''
@@ -138,8 +143,8 @@ def hand_rank(hand):
         return 4
     if is_threeofakind(hand):
         return 3
-    if is_onepair(hand):
-        return 1
+    if is_onepair(hand) != 100:
+        return is_onepair(hand)
     if is_twopair(hand):
         return 2
     if is_fullhouse(hand):
