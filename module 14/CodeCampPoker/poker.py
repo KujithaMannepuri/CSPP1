@@ -83,7 +83,7 @@ def is_onepair(hand):
         for index in setlist:
             if sortlist.count(index) == 2:
                 return index/10
-    return 50
+    return 100
 
 def is_twopair(hand):
     '''two pair values'''
