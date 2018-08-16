@@ -106,6 +106,13 @@ def is_fullhouse(hand):
         return True
     return False
 
+def high_hand(hand):
+    sortlist = sorted(sort(hand))
+    setlist = set(sortlist)
+    if len(setlist) == 5 and not is_flush(hand):
+        return max(setlist)/100
+    return False
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
