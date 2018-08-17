@@ -26,8 +26,6 @@ def similarity(dict1, dict2):
 
     counter1 = collections.Counter(dicta)
     counter2 = collections.Counter(dictb)
-    print(counter1)
-    print(counter2)
 
     list1=[]
     list2=[]
