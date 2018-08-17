@@ -14,6 +14,8 @@ def similarity(dict1, dict2):
     characters = string.ascii_letters + string.digits + ' '
     dicta = ''.join(ind for ind in dict1 if ind in characters)
     dictb = ''.join(ind for ind in dict2 if ind in characters)
+    dicta = ''.join(ind for ind in dicta if not ind.isdigit())
+    dictb = ''.join(ind for ind in dictb if not ind.isdigit())
     dicta = dicta.lower().strip().split()
     dictb = dictb.lower().strip().split()
     newdict = load_stopwords("stopwords.txt")
