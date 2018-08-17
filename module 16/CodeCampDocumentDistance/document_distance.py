@@ -3,14 +3,13 @@
 '''
 # def freqcount(data):
 #     return {i: data.count(i) for i in data}
-
+import collections
+import string
+import math
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    import collections
-    import string
-    import math
     characters = string.ascii_letters + string.digits + ' '
     dicta = ''.join(ind for ind in dict1 if ind in characters)
     dictb = ''.join(ind for ind in dict2 if ind in characters)
@@ -29,9 +28,9 @@ def similarity(dict1, dict2):
     counter1 = collections.Counter(dicta)
     counter2 = collections.Counter(dictb)
 
-    list1=[]
-    list2=[]
-    list3=[]
+    list1 = []
+    list2 = []
+    list3 = []
     for word in counter1:
         if word in counter2:
             list1.append(counter1[word]*counter2[word])
@@ -44,8 +43,6 @@ def similarity(dict1, dict2):
     rslt = nmrtr/dnmtr
     return rslt
 
-
-    
 def load_stopwords(stopwords):
     '''
         loads stop words from a file and returns a dictionary
