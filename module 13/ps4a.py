@@ -159,7 +159,6 @@ def updateHand(hand, word):
 
 #
 # Problem #3: Test word validity
-#
     updateHand = hand.copy()
     for ind in word:
         if ind in hand and hand[ind] != 0:
@@ -263,10 +262,11 @@ def playHand(hand, wordList, n):
     while True:
         data = input()    
         if data == ".":
-            break   
+            break
         getFrequencyDict(data)
 
         if isValidWord(data, hand, wordList):
+            #print(updateHand(hand,data))
             hand = updateHand(hand,data)
             z += getWordScore(data, n)
             print(z)
