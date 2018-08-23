@@ -77,7 +77,7 @@ def main():
     mat_size2 = input()
     mat_size2 = list(map(int, mat_size2.split(',')))
     matrix2 = read_matrix(mat_size2)
-    if matrix1 == None or matrix2 == None:
+    if matrix1 is None or matrix2 is None:
         print("Error: Invalid input for the matrix")
     else:
         matrixadd = add_matrix(matrix1, matrix2)
