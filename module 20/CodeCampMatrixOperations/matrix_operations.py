@@ -1,5 +1,5 @@
 import copy
-def mult_matrix(m1, m2):
+def mult_matrix(matrix1, matrix2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -7,22 +7,22 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if len(m1) != len(m2[0]):
+    if len(matrix1) != len(matrix2[0]):
         print("Error: Matrix shapes invalid for mult")
         return None
-    matrix = copy.deepcopy(m1)
+    matrix = copy.deepcopy(matrix1)
     mat1 = []
-    for i in range(len(m1)):
+    for i_1 in range(len(matrix1)):
         mat2 = []
-        for j in range(len(m2[0])):
+        for j_1 in range(len(matrix2[0])):
             mul = 0
-            for k in range(len(m2)):
-                mul += m1[i][k] * m2[k][j]
+            for k_1 in range(len(matrix2)):
+                mul += matrix1[i_1][k_1] * matrix2[k_1][j_1]
             mat2.append(mul)
         mat1.append(mat2)
     return mat1
 
-def add_matrix(m1, m2):
+def add_matrix(matrix1, matrix2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -30,13 +30,13 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if len(m1) != len(m2):
+    if len(matrix1) != len(matrix2):
         print("Error: Matrix shapes invalid for addition")
         return None
-    matrix = copy.deepcopy(m1)
-    for i in range(len(m1)):
-        for j in range(len(m1[0])):
-            matrix[i][j] = m1[i][j] + m2[i][j]
+    matrix = copy.deepcopy(matrix1)
+    for i in range(len(matrix1)):
+        for j in range(len(matrix1[0])):
+            matrix[i][j] = matrix1[i][j] + matrix2[i][j]
     return matrix
 
 def read_matrix(mat_size):
