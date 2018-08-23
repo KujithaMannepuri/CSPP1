@@ -8,7 +8,7 @@ def mult_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     if len(m1) != len(m2[0]):
-        print("Error: Invalid input for the matrix")
+        print("Error: Matrix shapes invalid for mult")
         return None
     matrix = copy.deepcopy(m1)
     for i in range(len(m1)):
@@ -27,7 +27,7 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     if len(m1) != len(m2):
-        print("Error: Invalid input for the matrix")
+        print("Error: Matrix shapes invalid for addition")
         return None
     matrix = copy.deepcopy(m1)
     for i in range(len(m1)):
