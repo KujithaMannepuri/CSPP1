@@ -35,9 +35,10 @@ def add_matrix(matrix1, matrix2):
         print("Error: Matrix shapes invalid for addition")
         return None
     matrix = copy.deepcopy(matrix1)
-    for i in range(len(matrix1)):
-        for j in range(len(matrix1[0])):
-            matrix[i][j] = matrix1[i][j] + matrix2[i][j]
+    # for i in range(len(matrix1)):
+    #     for j in range(len(matrix1[0])):
+    #         matrix[i][j] = matrix1[i][j] + matrix2[i][j]
+    matrix = [[matrix1[i][j] + matrix2[i][j]  for j in range(len(matrix1[0]))] for i in range(len(matrix1))]
     return matrix
 
 def read_matrix(mat_size):
