@@ -15,12 +15,12 @@ def mult_matrix(m_1, m_2):
     mat1 = []
     len_m1 = len(m_1)
     len_m2 = len(m_2[0])
-    len_m2 = len(m_2)
-    for i_1 in range(m_1):
+    len_m3 = len(m_2)
+    for i_1 in range(len_m1):
         mat2 = []
-        for j_1 in range(m_2[0]):
+        for j_1 in range(len_m2):
             mul = 0
-            for k_1 in range(m_2):
+            for k_1 in range(len_m3):
                 mul += m_1[i_1][k_1] * m_2[k_1][j_1]
             mat2.append(mul)
         mat1.append(mat2)
