@@ -23,7 +23,7 @@ def mult_matrix(matrix1, matrix2):
         mat1.append(mat2)
     return mat1
 
-def add_matrix(matrix1, matrix2):
+def add_matrix(m_1, m_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -31,14 +31,14 @@ def add_matrix(matrix1, matrix2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if len(matrix1) != len(matrix2):
+    if len(m_1) != len(m_2):
         print("Error: Matrix shapes invalid for addition")
         return None
-    matrix = copy.deepcopy(matrix1)
+    matrix = copy.deepcopy(m_1)
     # for i in range(len(matrix1)):
     #     for j in range(len(matrix1[0])):
     #         matrix[i][j] = matrix1[i][j] + matrix2[i][j]
-    matrix = [[matrix1[i][j] + matrix2[i][j]  for j in range(len(matrix1[0]))] for i in range(len(matrix1))]
+    matrix = [[m_1[i][j] + m_2[i][j]  for j in range(len(m_1[0]))] for i in range(len(m_1))]
     return matrix
 
 def read_matrix(mat_size):
