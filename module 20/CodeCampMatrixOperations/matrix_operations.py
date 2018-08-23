@@ -1,3 +1,5 @@
+'''calculate addition and multiplication of two matrices'''
+
 import copy
 def mult_matrix(matrix1, matrix2):
     '''
@@ -10,7 +12,6 @@ def mult_matrix(matrix1, matrix2):
     if len(matrix1) != len(matrix2[0]):
         print("Error: Matrix shapes invalid for mult")
         return None
-    matrix = copy.deepcopy(matrix1)
     mat1 = []
     for i_1 in range(len(matrix1)):
         mat2 = []
@@ -61,6 +62,7 @@ def read_matrix(mat_size):
     return matrix
 
 def main():
+    ''' main function '''
     # read matrix 1
 
     # read matrix 2
