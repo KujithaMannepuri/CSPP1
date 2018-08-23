@@ -11,12 +11,16 @@ def mult_matrix(m1, m2):
         print("Error: Matrix shapes invalid for mult")
         return None
     matrix = copy.deepcopy(m1)
+    mat1 = []
     for i in range(len(m1)):
+        mat2 = []
         for j in range(len(m2[0])):
-            matrix[i][j] = 0
+            mul = 0
             for k in range(len(m2)):
-                matrix[i][j] += m1[i][k] * m2[k][j]
-    return matrix
+                mul += m1[i][k] * m2[k][j]
+            mat2.append(mul)
+        mat1.append(mat2)
+    return mat1
 
 def add_matrix(m1, m2):
     '''
