@@ -1,7 +1,7 @@
 '''calculate addition and multiplication of two matrices'''
 
 import copy
-def mult_matrix(matrix1, matrix2):
+def mult_matrix(m_1, m_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -9,16 +9,19 @@ def mult_matrix(matrix1, matrix2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if len(matrix1) != len(matrix2[0]):
+    if len(m_1) != len(m_2[0]):
         print("Error: Matrix shapes invalid for mult")
         return None
     mat1 = []
-    for i_1 in range(len(matrix1)):
+    len_m1 = len(m_1)
+    len_m2 = len(m_2[0])
+    len_m2 = len(m_2)
+    for i_1 in range(m_1):
         mat2 = []
-        for j_1 in range(len(matrix2[0])):
+        for j_1 in range(m_2[0]):
             mul = 0
-            for k_1 in range(len(matrix2)):
-                mul += matrix1[i_1][k_1] * matrix2[k_1][j_1]
+            for k_1 in range(m_2):
+                mul += m_1[i_1][k_1] * m_2[k_1][j_1]
             mat2.append(mul)
         mat1.append(mat2)
     return mat1
