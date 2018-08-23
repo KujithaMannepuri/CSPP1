@@ -47,6 +47,8 @@ def delete_person(network, arg1):
     for index in network:
         if arg1 in network[index]:
             network[index].remove(arg1)
+    if arg1 in network:
+        network.pop(arg1)
     return network
 
 def main():
