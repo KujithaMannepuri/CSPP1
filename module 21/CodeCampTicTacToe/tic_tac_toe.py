@@ -66,7 +66,7 @@ def check_game(data):
     if abs(count1 - count2) != 1:
         return "invalid game"
     if count1 + count2 + count3 != 9:
-        return "invalid input"
+        return "invalid input "
     return play_game(data)
 def main():
     '''main function'''
