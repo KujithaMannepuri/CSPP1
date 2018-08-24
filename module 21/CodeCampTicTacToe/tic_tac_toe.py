@@ -1,7 +1,7 @@
 '''Tic_Tac_Toe Game'''
 
 def play_game(data):
-    '''Checking the game winner'''
+    '''Check the game winner'''
     s_a = set()
     s_b = set()
     s_c = set()
@@ -30,14 +30,14 @@ def play_game(data):
                 s_e.add(data[i][j])
     if len(s_a) == 1:
         return loop(s_a)
-    if len(s_a) == 1:
-        return loop(s_a)
-    if len(s_a) == 1:
-        return loop(s_a)
-    if len(s_a) == 1:
-        return loop(s_a)
-    if len(s_a) == 1:
-        return loop(s_a)
+    if len(s_b) == 1:
+        return loop(s_b)
+    if len(s_c) == 1:
+        return loop(s_c)
+    if len(s_d) == 1:
+        return loop(s_d)
+    if len(s_e) == 1:
+        return loop(s_e)
     return "draw"
 
 def loop(set_1):
