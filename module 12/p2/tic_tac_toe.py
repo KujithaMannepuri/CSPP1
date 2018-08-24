@@ -64,9 +64,9 @@ def check_game(data):
         if element3 in index:
             count3 += index.count(element3)
     if abs(count1 - count2) != 1:
-        return "invalid input"
+        return "invalid game"
     if count1 + count2 + count3 != 9:
-        return "invalid input"
+        return "invalid game"
     return play_game(data)
 def main():
     '''main function'''
