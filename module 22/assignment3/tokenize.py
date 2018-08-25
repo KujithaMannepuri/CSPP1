@@ -6,8 +6,8 @@ import re
 def tokenize(string):
     '''tokenizing a string'''
     token = {}
-    string = re.sub('[^A-Za-z0-9]+', ',', string)
-    string = string.split(',')
+    string = re.sub('[^A-Za-z0-9]+', ' ', string)
+    string = string.split()
     for key in string:
         token[key] = token.get(key, 0) + 1
     return token   
