@@ -6,9 +6,10 @@ the key and frequency with a SPACE - SPACE.
 
 def print_dictionary(dictionary):
     dict1 = []
-    dict['dictionary'].items()[0][0]
-    print(i,j)
-        # dict1 = dict1.append(dictionary)
+    for i in dictionary:
+        for i[j] in dictionary:
+            dict1 = dict1.append(i)
+            dict1 = dict1.append(i[j])
     return dict1
 
 def main():

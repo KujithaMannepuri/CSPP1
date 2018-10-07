@@ -15,10 +15,6 @@ def check_sudoku(sudoku):
     '''
     x = len(sudoku)
     for i in range(x):
-        for j in range(len(sudoku[i])):
-            if i == j:
-                print(i)
-
 
     
 def main():
